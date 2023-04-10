@@ -31,6 +31,7 @@ body{
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
+    color: #fff;
 }
 
 .hero::before{
@@ -49,4 +50,49 @@ body{
 /*Menu de navegacion*/
 .nav{
     --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center; /*Aliendo los items a un lado del otro*/
+}
+
+/*Cambios al titulo del hero*/
+.nav__title{
+    font-weight: 300;
+}
+
+/*Cambios a los elementos del nav*/
+.nav__link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+/*para quitarle el efecto lista a los items*/
+.nav__items{
+    list-style: none;
+}
+
+.nav__links{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*Cambios al menu hamburguesa*/
+.nav__menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none; 
+}
+
+/*Cambios al elemento hamburguesa*/
+.nav__img{
+    display: block;
+    width: 30px; 
+}
+
+.nav__close{
+    display: var(--show, none);
 }
